@@ -1,4 +1,5 @@
 return {
+  colorscheme = "nightfox",
   lsp = {
     servers = { "rust_analyzer" },
     config = {
@@ -15,12 +16,38 @@ return {
             procMacro = {
               enable = true,
             },
-            experimental = {
-              procAttrMacros = true,
-            },
           },
         },
       },
+    },
+  },
+  plugins = {
+    {
+      "EdenEast/nightfox.nvim",
+    },
+    {
+      "AlexvZyl/nordic.nvim",
+      lazy = false,
+      priority = 1000,
+      config = function() require("nordic").load() end,
+    },
+    {
+      "VonHeikemen/fine-cmdline.nvim",
+      keys = {
+        { ":", "<cmd>FineCmdline<cr>", desc = "FineCmdLine" },
+      },
+      opts = {
+        popup = {
+          size = {
+            width = "30%",
+          },
+        },
+      },
+    },
+    {
+      "simrat39/rust-tools.nvim",
+      event = "LspAttach",
+      config = true,
     },
   },
 }
