@@ -47,7 +47,12 @@ return {
     {
       "simrat39/rust-tools.nvim",
       event = "LspAttach",
-      config = true,
+      opts = {
+        hover_action = {
+          auto_focus = true,
+        },
+      },
+      config = function(_, opts) require("rust-tools").setup(opts) end,
     },
   },
 }
