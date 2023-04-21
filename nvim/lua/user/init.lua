@@ -29,7 +29,35 @@ return {
       "AlexvZyl/nordic.nvim",
       lazy = false,
       priority = 1000,
-      config = function() require("nordic").load() end,
+      opts = {
+        telescope = {
+          style = "classic",
+        },
+      },
+      config = function(_, opts) require("nordic").load(opts) end,
+    },
+    {
+      "nvim-neo-tree/neo-tree.nvim",
+      opts = {
+        filesystem = {
+          filtered_items = {
+            hide_dotfiles = false,
+            hide_gitignored = true,
+            always_show = {
+              ".env",
+            },
+            never_show = {
+              ".DS_Store",
+              "thumbs.db",
+              "node_modules",
+              ".parcel-cache",
+              ".vscode",
+              "target",
+              ".git",
+            },
+          },
+        },
+      },
     },
     {
       "VonHeikemen/fine-cmdline.nvim",
