@@ -23,6 +23,16 @@ return {
   },
   plugins = {
     {
+      "kylechui/nvim-surround",
+      version = "*", -- Use for stability; omit to use `main` branch for the latest features
+      event = "VeryLazy",
+      config = function()
+        require("nvim-surround").setup {
+          -- Configuration here, or leave empty to use defaults
+        }
+      end,
+    },
+    {
       --This will be removed after fix
       "nvim-neo-tree/neo-tree.nvim",
       opts = function(_, opts)
@@ -40,17 +50,6 @@ return {
     },
     {
       "EdenEast/nightfox.nvim",
-    },
-    {
-      "AlexvZyl/nordic.nvim",
-      lazy = false,
-      priority = 1000,
-      opts = {
-        telescope = {
-          style = "classic",
-        },
-      },
-      config = function(_, opts) require("nordic").load(opts) end,
     },
     {
       "nvim-neo-tree/neo-tree.nvim",
