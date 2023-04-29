@@ -1,5 +1,5 @@
 return {
-  colorscheme = "nightfox",
+  colorscheme = "nordic",
   lsp = {
     servers = { "rust_analyzer" },
     config = {
@@ -52,6 +52,33 @@ return {
       "EdenEast/nightfox.nvim",
     },
     {
+      "AlexvZyl/nordic.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {
+        theme = "onedark",
+        bold_keywords = false,
+        italic_comments = true,
+        transparent_bg = false,
+        bright_border = true,
+        nordic = {
+          reduced_blue = true,
+        },
+        onedark = {
+          brighter_whites = true,
+        },
+        cursorline = {
+          bold = false,
+          theme = "light",
+          hide_unfocused = true,
+        },
+        telescope = {
+          style = "classic",
+        },
+      },
+      config = function(_, opts) require("nordic").setup(opts) end,
+    },
+    {
       "nvim-neo-tree/neo-tree.nvim",
       opts = {
         filesystem = {
@@ -88,4 +115,7 @@ return {
       },
     },
   },
+  -- polish = {
+  --   vim.on_key(nil, vim.api.nvim_get_namespaces()["auto_hlsearch"]),
+  -- },
 }
