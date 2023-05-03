@@ -1,5 +1,5 @@
 return {
-  colorscheme = "nordic",
+  colorscheme = "nightfox",
   lsp = {
     servers = { "rust_analyzer" },
     config = {
