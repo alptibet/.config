@@ -36,6 +36,14 @@ return {
       "EdenEast/nightfox.nvim",
     },
     {
+      "L3MON4D3/LuaSnip",
+      dependencies = { "rafamadriz/friendly-snippets" },
+      config = function(plugins, opts)
+        require "plugins.configs.luasnip" (plugins, opts)
+        require("luasnip.loaders.from_vscode").lazy_load()
+      end,
+    },
+    {
       "VonHeikemen/fine-cmdline.nvim",
       keys = {
         { ":", "<cmd>FineCmdline<cr>", desc = "FineCmdLine" },
@@ -49,7 +57,9 @@ return {
       },
     },
   },
-  -- polish = {
-  --   vim.on_key(nil, vim.api.nvim_get_namespaces()["auto_hlsearch"]),
-  -- },
+  mappings = {
+    n = {
+      ["<CR>"] = { "ciw", desc = "change in word" },
+    },
+  },
 }
