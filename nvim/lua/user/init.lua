@@ -1,5 +1,5 @@
 return {
-  colorscheme = "nightfox",
+  colorscheme = "nordic",
   lsp = {
     servers = { "rust_analyzer" },
     config = {
@@ -34,6 +34,12 @@ return {
     },
     {
       "EdenEast/nightfox.nvim",
+    },
+    {
+      "AlexvZyl/nordic.nvim",
+      lazy = false,
+      priority = 1000,
+      config = function() require("nordic").load() end,
     },
     {
       "VonHeikemen/fine-cmdline.nvim",
