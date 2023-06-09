@@ -22,13 +22,13 @@ return {
     },
   },
   plugins = {
-    {
-      "L3MON4D3/LuaSnip",
-      config = function(plugin, opts)
-        require "plugins.configs.luasnip"(plugin, opts)
-        require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } }
-      end,
-    },
+    -- {
+    --   "L3MON4D3/LuaSnip",
+    --   config = function(plugin, opts)
+    --     require "plugins.configs.luasnip"(plugin, opts)
+    --     require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } }
+    --   end,
+    -- },
     {
       "kylechui/nvim-surround",
       version = "*", -- Use for stability; omit to use `main` branch for the latest features
