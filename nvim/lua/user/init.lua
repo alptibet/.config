@@ -1,5 +1,5 @@
 return {
-  colorscheme = "nightfox",
+  colorscheme = "tokyonight-night",
   lsp = {
     servers = { "rust_analyzer" },
     config = {
@@ -22,13 +22,13 @@ return {
     },
   },
   plugins = {
-    -- {
-    --   "L3MON4D3/LuaSnip",
-    --   config = function(plugin, opts)
-    --     require "plugins.configs.luasnip"(plugin, opts)
-    --     require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } }
-    --   end,
-    -- },
+    {
+      "L3MON4D3/LuaSnip",
+      config = function(plugin, opts)
+        require "plugins.configs.luasnip" (plugin, opts)
+        require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } }
+      end,
+    },
     {
       "kylechui/nvim-surround",
       version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -40,20 +40,10 @@ return {
       end,
     },
     {
-      "EdenEast/nightfox.nvim",
-    },
-    {
-      "AlexvZyl/nordic.nvim",
+      "folke/tokyonight.nvim",
       lazy = false,
       priority = 1000,
-      config = function()
-        require("nordic").setup {
-          theme = "onedark",
-          onedark = {
-            brighter_whites = true,
-          },
-        }
-      end,
+      opts = {},
     },
     {
       "VonHeikemen/fine-cmdline.nvim",
