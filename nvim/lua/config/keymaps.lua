@@ -37,6 +37,10 @@ vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", {
 -- Movement
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
 
 -- Enter to change word
 vim.keymap.set("n", "<CR>", "ciw")
@@ -52,3 +56,13 @@ vim.keymap.set("n", "<leader>fs", "<cmd>:Telescope grep_string<cr>")
 
 --Toggle Lazygit
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = 'Toggle Lazygit' })
+
+--Toggle Aerial
+vim.keymap.set("n", "<leader>ls", "<cmd>AerialToggle<cr>", { desc = 'Toogle Aerial' })
+
+--Comment
+vim.keymap.set("n", "<leader>/",
+  function() require("Comment.api").toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1) end,
+  { desc = 'Toogle Aerial' })
+vim.keymap.set("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
+  { desc = 'Toogle Aerial' })

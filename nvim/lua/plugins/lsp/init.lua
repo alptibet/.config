@@ -24,11 +24,18 @@ return {
 
     },
     config = function()
-      local lsp = require('lsp-zero').preset({})
+      local lsp = require('lsp-zero').preset('recommended')
 
       lsp.on_attach(function(client, bufnr)
         lsp.default_keymaps({ buffer = bufnr })
       end)
+
+      lsp.set_sign_icons({
+        error = '✘',
+        warn = '▲',
+        hint = '⚑',
+        info = '»'
+      })
 
       lsp.format_on_save({
         format_opts = {
@@ -48,6 +55,23 @@ return {
             diagnostics = {
               globals = { 'vim' }
             }
+          }
+        }
+      })
+
+      require('lspconfig').rust_analyzer.setup({
+        settings = {
+          ['rust-analyzer'] = {
+            cargo = {
+              loadOutDirsFromCheck = true,
+              features = "all",
+            },
+            checkOnSave = {
+              command = "clippy",
+            },
+            procMacro = {
+              enable = true,
+            },
           }
         }
       })
