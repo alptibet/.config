@@ -49,3 +49,6 @@ vim.keymap.set("n", "<leader>fo", "<cmd>:Telescope oldfiles<cr>")
 vim.keymap.set("n", "<leader>:", "<cmd>:Telescope command_history<cr>")
 vim.keymap.set("n", "<leader>ft", "<cmd>:Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>fs", "<cmd>:Telescope grep_string<cr>")
+
+--Toggle Lazygit
+vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = 'Toggle Lazygit' })

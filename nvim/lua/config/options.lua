@@ -19,16 +19,16 @@ opt.list = true            -- Show some invisible characters (tabs...
 opt.mouse = "a"            -- Enable mouse mode
 opt.number = true          -- Print line number
 opt.pumblend = 10          -- Popup blend
-opt.pumheight = 10         -- Maximum number of entries in a popup
+opt.pumheight = 20         -- Maximum number of entries in a popup
 opt.relativenumber = true  -- Relative line numbers
 opt.scrolloff = 4          -- Lines of context
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
 opt.shiftround = true      -- Round indent
 opt.shiftwidth = 2         -- Size of an indent
 opt.shortmess:append({
-    W = true,
-    I = true,
-    c = true
+  W = true,
+  I = true,
+  c = true
 })
 opt.showmode = false     -- Dont show mode since we have a statusline
 opt.sidescrolloff = 8    -- Columns of context
