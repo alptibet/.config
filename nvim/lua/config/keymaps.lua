@@ -7,40 +7,30 @@ vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", {
   expr = true,
   silent = true
 })
-vim.keymap.set("n", "<leader>w", "<cmd>:w<cr>", {
-  desc = "Save"
-})
-vim.keymap.set("n", "<leader>q", "<cmd>:q<cr>", {
-  desc = "Quit"
-})
-vim.keymap.set("n", "|", "<cmd>vsplit<cr>", {
-  desc = "Vertical Split"
-})
-vim.keymap.set("n", "\\", "<cmd>split<cr>", {
-  desc = "Horizontal Split"
-})
-vim.keymap.set("n", "<leader>c", "<cmd>:bd<cr>", {
-  desc = "Close Buffer"
-})
+vim.keymap.set("n", "<leader>w", "<cmd>:w<cr>", { desc = "Save" })
+vim.keymap.set("n", "<leader>q", "<cmd>:q<cr>", { desc = "Quit" })
+vim.keymap.set("n", "|", "<cmd>vsplit<cr>", { desc = "Vertical Split" })
+vim.keymap.set("n", "\\", "<cmd>split<cr>", { desc = "Horizontal Split" })
 
 -- Clear search highlights
 vim.keymap.set("n", "<esc>", "<cmd>noh<cr>")
 
 -- Buffer Navigation
-vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", {
-  desc = "Next buffer"
-})
-vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", {
-  desc = "Next buffer"
-})
+vim.keymap.set("n", "<leader>c", "<cmd>:bd<cr>", { desc = "Close Buffer" })
+vim.keymap.set("n", "<leader>x", "<cmd>:bd<cr>", { desc = "Close Other Buffers" })
+vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Next buffer" })
+vim.keymap.set("n", "<leader>gb", "<cmd>:BufferLinePick<cr>", { desc = "Next buffer" })
+vim.keymap.set("n", "<leader>bc", "<cmd>:BufferLinePickClose<cr>", { desc = "Next buffer" })
 
--- Movement
+--Movement
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
+vim.keymap.set("i", "<jk>", "<ESC>")
 
 -- Enter to change word
 vim.keymap.set("n", "<CR>", "ciw")
@@ -69,3 +59,6 @@ vim.keymap.set("n", "<leader>/",
   { desc = 'Toogle Aerial' })
 vim.keymap.set("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
   { desc = 'Toogle Aerial' })
+
+--Session Manager
+vim.keymap.set("n", "<leader>S", "<cmd>SessionManager load_session<cr>", { desc = 'Toogle Aerial' })
