@@ -24,11 +24,14 @@ return {
       { 'hrsh7th/cmp-path' },
       { 'hrsh7th/cmp-buffer' },
       { 'hrsh7th/cmp-nvim-lsp' },
-      { 'saadparwaiz1/cmp_luasnip' }
+      { 'saadparwaiz1/cmp_luasnip' },
+      { 'simrat39/inlay-hints.nvim' }
 
     },
     config = function()
-      local lsp = require('lsp-zero').preset('recommended')
+      local ih = require('inlay-hints')
+      ih.setup()
+      local lsp = require('lsp-zero').preset({ 'recommended' })
 
       lsp.on_attach(function(client, bufnr)
         lsp.default_keymaps({ buffer = bufnr })
@@ -64,8 +67,12 @@ return {
       })
 
       require('lspconfig').rust_analyzer.setup({
+        on_attach = function(client, bufnr)
+          ih.on_attach(client, bufnr)
+        end,
         settings = {
           ['rust-analyzer'] = {
+            hint = { enable = true },
             cargo = {
               loadOutDirsFromCheck = true,
               features = "all",
@@ -100,7 +107,7 @@ return {
         },
         mapping = {
           -- `Enter` key to confirm completion
-          ['<Space>'] = cmp.mapping.confirm({ select = false }),
+          ['<CR>'] = cmp.mapping.confirm({ select = false }),
           ["<Tab>"] = cmp.mapping(function()
             if cmp.visible() then
               cmp.select_next_item(cmp_select_opts)
@@ -118,10 +125,6 @@ return {
 
           -- Alt+Space to trigger completion menu
           ['<A-Space>'] = cmp.mapping.complete(),
-
-          -- Navigate between snippet placeholder
-          ['<C-f>'] = cmp_action.luasnip_jump_backward,
-          ['<C-b>'] = cmp_action.luasnip_jump_backward(),
         }
       })
     end
