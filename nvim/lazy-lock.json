@@ -23,6 +23,7 @@
   "mellow.nvim": { "branch": "main", "commit": "882c9dcf4e97f41e22fcc8190827ae4ac2fa9134" },
   "mini.files": { "branch": "main", "commit": "4c8cb663d88473afdc1dbb30654419cfbd159a94" },
   "mini.pairs": { "branch": "main", "commit": "963b800d0524eadd297199207011b98684205ada" },
+  "mini.starter": { "branch": "main", "commit": "9591477df06e71352a155823d0eb506ff9cae52b" },
   "mini.statusline": { "branch": "main", "commit": "419e981c4120d5e59400ecfea300f037f39c49b0" },
   "neovim-session-manager": { "branch": "master", "commit": "51827268c5ee56567b7033af9ed547ab704553b9" },
   "no-clown-fiesta.nvim": { "branch": "master", "commit": "e2e49eab9a152b753fa1c4c39d209f1687c0077f" },
