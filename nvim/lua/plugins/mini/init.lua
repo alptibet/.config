@@ -46,9 +46,12 @@ return {
         "    (o o)         (o o)      -  (O o)  -         (o o)         (o o)         (o o)         (o o)         (o o)     ",
         "ooO--(_)--Ooo-ooO--(_)--Ooo-ooO--(_)--Ooo----ooO--(_)--Ooo-ooO--(_)--Ooo-ooO--(_)--Ooo-ooO--(_)--Ooo-ooO--(_)--Ooo-",
       }, "\n")
-
+      local starter = require('mini.starter')
       local config = {
         header = logo,
+        content_hooks = {
+          starter.gen_hook.aligning("center", "center"),
+        },
       }
       return config
     end,
