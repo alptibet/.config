@@ -6,5 +6,8 @@ omf
 lvim
 helix
 iterm2
-nvim.bak
 .gitattributes
+zed
+yarn
+zellij
+github-copilot
