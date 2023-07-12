@@ -5,6 +5,9 @@ return {
     "nvim-tree/nvim-web-devicons"
   },
   opts = {
+    layout = {
+      min_width = 20,
+    },
     buftype_exclude = {
       "nofile",
       "terminal",

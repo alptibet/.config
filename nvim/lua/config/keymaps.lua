@@ -15,6 +15,11 @@ vim.keymap.set("n", "\\", "<cmd>split<cr>", { desc = "Horizontal Split" })
 -- Clear search highlights
 vim.keymap.set("n", "<esc>", "<cmd>noh<cr>")
 
+-- File Explorer
+vim.keymap.set("n", "<leader>o", "<cmd>:NeoTreeFocusToggle<cr>", { desc = "NeoTree Toggle Focus" })
+vim.keymap.set("n", "<leader>r", "<cmd>:NeoTreeReveal<cr>", { desc = "NeoTree Reveal File" })
+vim.keymap.set("n", "<leader>h", "<cmd>:NeoTreeFloat<cr>", { desc = "NeoTree Float" })
+
 -- Buffer Navigation
 vim.keymap.set("n", "<leader>c", "<cmd>:bd<cr>", { desc = "Close Buffer" })
 vim.keymap.set("n", "<leader>x", "<cmd>:bd<cr>", { desc = "Close Other Buffers" })

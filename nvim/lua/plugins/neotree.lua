@@ -1,6 +1,5 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
-  cmd = "Neotree",
   opts = {
     auto_clean_after_session_restore = true,
     close_if_last_window = false,
@@ -50,11 +49,14 @@ return {
     },
     filesystem = {
       follow_current_file = false,
-      hijack_netrw_behavior = "open_current",
+      bind_to_cwd = true,
+      hijack_netrw_behavior = "open_default",
+      use_libuv_file_watcher = false,
       filtered_items = {
         hide_dotfiles = false,
         hide_gitignored = false,
         hide_by_name = { "node_modules" },
+        never_show = { ".DS_Store" }
       }
     },
     window = {
@@ -66,5 +68,8 @@ return {
         l = "child_or_open"
       }
     }
-  }
+  },
+  config = function(_, opts)
+    require("neo-tree").setup(opts)
+  end
 }
