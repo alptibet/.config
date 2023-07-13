@@ -27,6 +27,7 @@ return {
         symbols = {
           renamed = "󰁕",
           unstaged = "󰄱",
+          staged = "s",
         },
       },
     },
