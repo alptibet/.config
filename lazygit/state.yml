@@ -2,7 +2,6 @@ lastupdatecheck: 0
 recentrepos:
 - /home/alptibet/.config
 - /home/alptibet/.config/nvim
-- /home/alptibet/dev/project-tracker-axum
 startuppopupversion: 5
 customcommandshistory: []
-hidecommandlog: false
+hidecommandlog: true

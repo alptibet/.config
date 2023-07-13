@@ -18,6 +18,11 @@ return {
         folder_empty = "󰜌",
         folder_empty_open = "󰜌",
       },
+      name = {
+        trailing_slash = false,
+        use_git_status_colors = true,
+        highlight = "NeoTreeFileName",
+      },
       git_status = {
         symbols = {
           renamed = "󰁕",
@@ -51,7 +56,7 @@ return {
       follow_current_file = false,
       bind_to_cwd = true,
       hijack_netrw_behavior = "open_default",
-      use_libuv_file_watcher = false,
+      use_libuv_file_watcher = true,
       filtered_items = {
         hide_dotfiles = false,
         hide_gitignored = false,
