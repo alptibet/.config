@@ -110,18 +110,20 @@ return {
         mapping = {
           -- `Enter` key to confirm completion
           ['<CR>'] = cmp.mapping.confirm({ select = false }),
-          ["<Tab>"] = cmp.mapping(function()
+          ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_next_item(cmp_select_opts)
             else
-              cmp.complete()
+              -- cmp.complete()
+              fallback()
             end
           end),
-          ["<S-Tab>"] = cmp.mapping(function()
+          ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_prev_item(cmp_select_opts)
             else
-              cmp.complete()
+              -- cmp.complete()
+              fallback()
             end
           end),
 
