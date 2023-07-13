@@ -22,7 +22,7 @@ vim.keymap.set("n", "<leader>h", "<cmd>:NeoTreeFloat<cr>", { desc = "NeoTree Flo
 
 -- Buffer Navigation
 vim.keymap.set("n", "<leader>c", "<cmd>:bd<cr>", { desc = "Close Buffer" })
-vim.keymap.set("n", "<leader>x", "<cmd>:bd<cr>", { desc = "Close Other Buffers" })
+vim.keymap.set("n", "<leader>x", "<cmd>:BufferLineCloseOthers<cr>", { desc = "Close Other Buffers" })
 vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>gb", "<cmd>:BufferLinePick<cr>", { desc = "Next buffer" })
