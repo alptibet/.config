@@ -1,7 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/alptibet/.config
 - /home/alptibet/.config/nvim
+- /home/alptibet/.config
 startuppopupversion: 5
 customcommandshistory: []
 hidecommandlog: true
