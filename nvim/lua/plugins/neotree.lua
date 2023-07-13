@@ -2,7 +2,7 @@ return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
     auto_clean_after_session_restore = true,
-    close_if_last_window = false,
+    close_if_last_window = true,
     enable_git_status = true,
     enable_diagnostics = true,
     sources = { "filesystem", "buffers", "git_status", "document_symbols" },
@@ -51,9 +51,8 @@ return {
     },
     filesystem = {
       follow_current_file = false,
-      bind_to_cwd = true,
       hijack_netrw_behavior = "open_default",
-      use_libuv_file_watcher = true,
+      use_libuv_file_watcher = false,
       filtered_items = {
         hide_dotfiles = false,
         hide_gitignored = false,
