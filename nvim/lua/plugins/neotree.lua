@@ -18,11 +18,11 @@ return {
         folder_empty = "󰜌",
         folder_empty_open = "󰜌",
       },
-      name = {
-        trailing_slash = false,
-        use_git_status_colors = true,
-        highlight = "NeoTreeFileName",
-      },
+      -- name = {
+      --   trailing_slash = false,
+      --   use_git_status_colors = true,
+      --   highlight = "NeoTreeFileName",
+      -- },
       git_status = {
         symbols = {
           renamed = "󰁕",
