@@ -91,9 +91,8 @@ return {
 
       lsp.setup()
 
-      local cmp = require('cmp')
       local luasnip = require('luasnip')
-      local cmp_action = require('lsp-zero').cmp_action()
+      local cmp = require('cmp')
       local cmp_select_opts = { behavior = cmp.SelectBehavior.Select }
       require('luasnip.loaders.from_vscode').lazy_load()
 
@@ -102,10 +101,14 @@ return {
         completion = {
           completeopt = 'menu,menuone,noinsert'
         },
+        window = {
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered(),
+        },
         sources = {
-          { name = 'luasnip', keyword_length = 2 },
           { name = 'buffer',  keyword_length = 3 },
           { name = 'nvim_lsp' },
+          { name = 'luasnip', keyword_length = 2 },
           { name = 'path' },
         },
         mapping = {
@@ -113,24 +116,26 @@ return {
           ['<CR>'] = cmp.mapping.confirm({ select = false }),
           ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
-              cmp.select_next_item()
+              cmp.select_next_item(cmp_select_opts)
+            elseif luasnip.jumpable then
+              luasnip.jump(1)
             elseif luasnip.expand_or_jumpable() then
               luasnip.expand_or_jump()
-            elseif has_words_before() then
-              cmp.complete()
+            elseif luasnip.expandable() then
+              luasnip.expand()
             else
               fallback()
             end
-          end, { 'i', 's' }),
+          end),
           ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
-              cmp.select_prev_item()
+              cmp.select_prev_item(cmp_select_opts)
             elseif luasnip.jumpable(-1) then
               luasnip.jump(-1)
             else
               fallback()
             end
-          end, { 'i', 's' }),
+          end),
 
           -- Alt+Space to trigger completion menu
           ['<A-Space>'] = cmp.mapping.complete(),
