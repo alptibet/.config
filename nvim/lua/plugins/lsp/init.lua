@@ -126,7 +126,7 @@ return {
             else
               fallback()
             end
-          end),
+          end, { 'i', 's' }),
           ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_prev_item(cmp_select_opts)
@@ -135,7 +135,7 @@ return {
             else
               fallback()
             end
-          end),
+          end, { 'i', 's' }),
 
           -- Alt+Space to trigger completion menu
           ['<A-Space>'] = cmp.mapping.complete(),
