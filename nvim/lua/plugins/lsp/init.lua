@@ -67,6 +67,23 @@ return {
         }
       })
 
+      require('lspconfig').emmet_language_server.setup({
+        on_attach = function(client, buffer)
+        end,
+        settings = {
+          emmet_language_server = {
+            default_config = {
+              cmd = { 'emmet-language-server', '--stdio' },
+              filetypes = {
+                'html', 'typescriptreact', 'javascriptreact', 'javascript',
+                'typescript', 'javascript.jsx', 'typescript.tsx', 'css'
+              },
+              settings = {},
+            }
+          }
+        }
+      })
+
       require('lspconfig').rust_analyzer.setup({
         on_attach = function(client, bufnr)
           ih.on_attach(client, bufnr)
