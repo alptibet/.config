@@ -133,7 +133,7 @@ return {
           ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_next_item(cmp_select_opts)
-            elseif luasnip.jumpable then
+            elseif luasnip.jumpable(1) then
               luasnip.jump(1)
             elseif luasnip.expand_or_jumpable() then
               luasnip.expand_or_jump()
