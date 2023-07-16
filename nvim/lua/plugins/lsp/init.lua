@@ -36,6 +36,7 @@ return {
       lsp.on_attach(function(client, bufnr)
         lsp.default_keymaps({ buffer = bufnr })
         vim.keymap.set('n', '<leader>la', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+        vim.keymap.set('n', '<leader>lR', '<cmd>lua vim.lsp.buf.rename()<cr>')
       end)
 
       lsp.set_sign_icons({
