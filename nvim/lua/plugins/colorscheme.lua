@@ -4,5 +4,8 @@ return {
   },
   {
     'aktersnurra/no-clown-fiesta.nvim'
+  },
+  {
+    'lvim-tech/lvim-colorscheme'
   }
 }
