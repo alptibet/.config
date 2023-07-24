@@ -25,12 +25,12 @@ return {
       { 'hrsh7th/cmp-buffer' },
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'saadparwaiz1/cmp_luasnip' },
-      { 'simrat39/inlay-hints.nvim' }
+      -- { 'simrat39/inlay-hints.nvim' }
 
     },
     config = function()
-      local ih = require('inlay-hints')
-      ih.setup()
+      -- local ih = require('inlay-hints')
+      -- ih.setup()
       local lsp = require('lsp-zero').preset({ 'recommended' })
 
       lsp.on_attach(function(client, bufnr)
@@ -69,9 +69,9 @@ return {
       })
 
       require('lspconfig').rust_analyzer.setup({
-        on_attach = function(client, bufnr)
-          ih.on_attach(client, bufnr)
-        end,
+        -- on_attach = function(client, bufnr)
+        --   ih.on_attach(client, bufnr)
+        -- end,
         settings = {
           ['rust-analyzer'] = {
             hint = { enable = true },
