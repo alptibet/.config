@@ -9,4 +9,3 @@ return {
     require('lualine').setup(opts)
   end
 }
--- will continue later
