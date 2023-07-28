@@ -27,6 +27,8 @@ vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>gb", "<cmd>:BufferLinePick<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bc", "<cmd>:BufferLinePickClose<cr>", { desc = "Next buffer" })
+-- vim.keymap.set("n", "<C-l>", "<cmd>:BufferLineCloseLeft<cr>", { desc = "Close all buffers - left" })
+-- vim.keymap.set("n", "<C-r>", "<cmd>:BufferLineCloseRight<cr>", { desc = "Close all buffers - right " })
 
 --Movement
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -47,9 +49,18 @@ vim.keymap.set("n", "<leader>fo", "<cmd>:Telescope oldfiles<cr>")
 vim.keymap.set("n", "<leader>:", "<cmd>:Telescope command_history<cr>")
 vim.keymap.set("n", "<leader>ft", "<cmd>:Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>fs", "<cmd>:Telescope grep_string<cr>")
+vim.keymap.set("n", "<leader>fr", "<cmd>:Telescope lsp_references<cr>")
+vim.keymap.set("n", "<leader>fm", "<cmd>:Telescope marks<cr>")
 
 --Trouble
-vim.keymap.set("n", "<leader>sd", "<cmd>:TroubleToggle<cr>", { desc = "Toggle Trouble" })
+vim.keymap.set("n", "<leader>tw", "<cmd>:TroubleToggle workspace_diagnostics<cr>",
+  { desc = "Toggle Trouble workspace diagnostics" })
+vim.keymap.set("n", "<leader>td", "<cmd>:TroubleToggle document_diagnostics<cr>",
+  { desc = "Toggle Trouble document diagnostics" })
+vim.keymap.set("n", "<leader>tq", "<cmd>:TroubleToggle quickfix<cr>",
+  { desc = "Toggle Trouble quickfix" })
+vim.keymap.set("n", "<leader>tr", "<cmd>:TroubleToggle lsp_references<cr>",
+  { desc = "Toggle Trouble lsp references" })
 
 --Toggle Lazygit
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = 'Toggle Lazygit' })
@@ -60,9 +71,9 @@ vim.keymap.set("n", "<leader>ls", "<cmd>AerialToggle<cr>", { desc = 'Toogle Aeri
 --Comment
 vim.keymap.set("n", "<leader>/",
   function() require("Comment.api").toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1) end,
-  { desc = 'Toogle Aerial' })
+  { desc = 'Comment' })
 vim.keymap.set("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
-  { desc = 'Toogle Aerial' })
+  { desc = 'Comment Selection' })
 
 --Session Manager
-vim.keymap.set("n", "<leader>S", "<cmd>SessionManager load_session<cr>", { desc = 'Toogle Aerial' })
+vim.keymap.set("n", "<leader>S", "<cmd>SessionManager load_session<cr>", { desc = 'Load Session' })
