@@ -9,13 +9,15 @@ return {
   event = "VeryLazy",
   config = function()
     require('telescope').setup({
-      mappings = {
-        i = {
-          ["<C-k>"] = require('telescope.actions').move_selection_next,
-          ["<C-j>"] = require('telescope.actions').move_selection_previous,
-          ["<C-c>"] = require('telescope.actions').close,
-          ["<C-u>"] = false
-        }
+      defaults = {
+        mappings = {
+          i = {
+            ["<C-k>"] = require('telescope.actions').move_selection_previous,
+            ["<C-j>"] = require('telescope.actions').move_selection_next,
+            ["<C-c>"] = require('telescope.actions').close,
+            ["<C-u>"] = false
+          }
+        },
       },
       pickers = {
         find_files = {
