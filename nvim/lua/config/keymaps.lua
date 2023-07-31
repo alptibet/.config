@@ -27,8 +27,8 @@ vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>gb", "<cmd>:BufferLinePick<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bc", "<cmd>:BufferLinePickClose<cr>", { desc = "Next buffer" })
--- vim.keymap.set("n", "<C-l>", "<cmd>:BufferLineCloseLeft<cr>", { desc = "Close all buffers - left" })
--- vim.keymap.set("n", "<C-r>", "<cmd>:BufferLineCloseRight<cr>", { desc = "Close all buffers - right " })
+vim.keymap.set("n", "<F13>", "<cmd>:BufferLineCloseLeft<cr>", { desc = "Close all buffers - left" })
+vim.keymap.set("n", "<F14>", "<cmd>:BufferLineCloseRight<cr>", { desc = "Close all buffers - right " })
 
 --Movement
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
