@@ -106,10 +106,10 @@ return {
           documentation = cmp.config.window.bordered(),
         },
         sources = {
-          { name = 'luasnip', keyword_length = 2 },
           { name = 'nvim_lsp' },
           { name = 'buffer',  keyword_length = 3 },
           { name = 'path' },
+          { name = 'luasnip', keyword_length = 2 },
         },
         mapping = {
           -- `Enter` key to confirm completion
