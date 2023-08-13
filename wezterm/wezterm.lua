@@ -12,8 +12,8 @@ end
 
 -- This is where you actually apply your config choices
 
-config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Light" })
-config.font_size = 12
+config.font = wezterm.font("Iosevka Nerd Font Mono")
+config.font_size = 14
 config.line_height = 1.2
 config.window_padding = {
   left = 0,
@@ -22,7 +22,7 @@ config.window_padding = {
   bottom = 0,
 }
 
-config.color_scheme = "kanagawa"
+config.color_scheme = "kanagawa-dragon"
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
 config.keys = {
