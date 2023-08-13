@@ -97,6 +97,9 @@ return {
       require('luasnip.loaders.from_vscode').lazy_load()
 
       cmp.setup({
+        performance = {
+          debounce = 400
+        },
         preselect = 'item',
         completion = {
           completeopt = 'menu,menuone,noinsert'
