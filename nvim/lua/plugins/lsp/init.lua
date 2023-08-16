@@ -98,7 +98,7 @@ return {
 
       cmp.setup({
         performance = {
-          debounce = 400
+          debounce = 300
         },
         preselect = 'item',
         completion = {

@@ -61,6 +61,8 @@ vim.keymap.set("n", "<leader>tq", "<cmd>:TroubleToggle quickfix<cr>",
   { desc = "Toggle Trouble quickfix" })
 vim.keymap.set("n", "<leader>tr", "<cmd>:TroubleToggle lsp_references<cr>",
   { desc = "Toggle Trouble lsp references" })
+vim.keymap.set("n", "<leader>gd", "<cmd>:TroubleToggle lsp_definitions<cr>",
+  { desc = "Toggle Trouble lsp definitions" })
 
 --Toggle Lazygit
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = 'Toggle Lazygit' })
