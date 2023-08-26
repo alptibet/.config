@@ -25,12 +25,12 @@ return {
       { 'hrsh7th/cmp-buffer' },
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'saadparwaiz1/cmp_luasnip' },
-      -- { 'simrat39/inlay-hints.nvim' }
+      { 'simrat39/inlay-hints.nvim' }
 
     },
     config = function()
-      -- local ih = require('inlay-hints')
-      -- ih.setup()
+      local ih = require('inlay-hints')
+      ih.setup()
       local lsp = require('lsp-zero').preset({ 'recommended' })
 
       lsp.on_attach(function(client, bufnr)
@@ -54,7 +54,7 @@ return {
         servers = {
           ['lua_ls'] = { 'lua' },
           ['rust_analyzer'] = { 'rust' },
-          ['null-ls'] = { 'javascript', 'typescript', 'javascriptreact', 'css' }
+          ['null-ls'] = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'css' }
         }
       })
 
@@ -97,9 +97,6 @@ return {
       require('luasnip.loaders.from_vscode').lazy_load()
 
       cmp.setup({
-        performance = {
-          debounce = 300
-        },
         preselect = 'item',
         completion = {
           completeopt = 'menu,menuone,noinsert'
