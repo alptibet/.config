@@ -58,6 +58,11 @@ return {
         }
       })
 
+      require('lspconfig').emmet_ls.setup({
+        filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte",
+          "pug", "typescriptreact", "vue" }
+      })
+
       require('lspconfig').lua_ls.setup({
         settings = {
           Lua = {
@@ -95,6 +100,7 @@ return {
       local cmp = require('cmp')
       local cmp_select_opts = { behavior = cmp.SelectBehavior.Select }
       require('luasnip.loaders.from_vscode').lazy_load()
+      require('luasnip').filetype_extend('javascript', { 'javascriptreact' })
 
       cmp.setup({
         preselect = 'item',

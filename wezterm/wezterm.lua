@@ -22,7 +22,7 @@ config.window_padding = {
   bottom = 0,
 }
 
-config.color_scheme = "kanagawa-dragon"
+config.color_scheme = "Catppuccin Mocha"
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
 config.keys = {
