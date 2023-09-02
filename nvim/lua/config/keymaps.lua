@@ -1,11 +1,11 @@
 -- Standard Operations
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", {
-  expr = true,
-  silent = true
+	expr = true,
+	silent = true,
 })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", {
-  expr = true,
-  silent = true
+	expr = true,
+	silent = true,
 })
 vim.keymap.set("n", "<leader>w", "<cmd>:w<cr>", { desc = "Save" })
 vim.keymap.set("n", "<leader>q", "<cmd>:q<cr>", { desc = "Quit" })
@@ -53,29 +53,43 @@ vim.keymap.set("n", "<leader>fr", "<cmd>:Telescope lsp_references<cr>")
 vim.keymap.set("n", "<leader>fm", "<cmd>:Telescope marks<cr>")
 
 --Trouble
-vim.keymap.set("n", "<leader>tw", "<cmd>:TroubleToggle workspace_diagnostics<cr>",
-  { desc = "Toggle Trouble workspace diagnostics" })
-vim.keymap.set("n", "<leader>td", "<cmd>:TroubleToggle document_diagnostics<cr>",
-  { desc = "Toggle Trouble document diagnostics" })
-vim.keymap.set("n", "<leader>tq", "<cmd>:TroubleToggle quickfix<cr>",
-  { desc = "Toggle Trouble quickfix" })
-vim.keymap.set("n", "<leader>tr", "<cmd>:TroubleToggle lsp_references<cr>",
-  { desc = "Toggle Trouble lsp references" })
-vim.keymap.set("n", "<leader>gd", "<cmd>:TroubleToggle lsp_definitions<cr>",
-  { desc = "Toggle Trouble lsp definitions" })
+vim.keymap.set(
+	"n",
+	"<leader>tw",
+	"<cmd>:TroubleToggle workspace_diagnostics<cr>",
+	{ desc = "Toggle Trouble workspace diagnostics" }
+)
+vim.keymap.set(
+	"n",
+	"<leader>td",
+	"<cmd>:TroubleToggle document_diagnostics<cr>",
+	{ desc = "Toggle Trouble document diagnostics" }
+)
+vim.keymap.set("n", "<leader>tq", "<cmd>:TroubleToggle quickfix<cr>", { desc = "Toggle Trouble quickfix" })
+vim.keymap.set("n", "<leader>tr", "<cmd>:TroubleToggle lsp_references<cr>", { desc = "Toggle Trouble lsp references" })
+vim.keymap.set(
+	"n",
+	"<leader>gd",
+	"<cmd>:TroubleToggle lsp_definitions<cr>",
+	{ desc = "Toggle Trouble lsp definitions" }
+)
 
 --Toggle Lazygit
-vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = 'Toggle Lazygit' })
+vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "Toggle Lazygit" })
 
 --Toggle Aerial
-vim.keymap.set("n", "<leader>ls", "<cmd>AerialToggle<cr>", { desc = 'Toogle Aerial' })
+vim.keymap.set("n", "<leader>ls", "<cmd>AerialToggle<cr>", { desc = "Toogle Aerial" })
 
 --Comment
-vim.keymap.set("n", "<leader>/",
-  function() require("Comment.api").toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1) end,
-  { desc = 'Comment' })
-vim.keymap.set("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
-  { desc = 'Comment Selection' })
+vim.keymap.set("n", "<leader>/", function()
+	require("Comment.api").toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1)
+end, { desc = "Comment" })
+vim.keymap.set(
+	"v",
+	"<leader>/",
+	"<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
+	{ desc = "Comment Selection" }
+)
 
 --Session Manager
-vim.keymap.set("n", "<leader>S", "<cmd>SessionManager load_session<cr>", { desc = 'Load Session' })
+vim.keymap.set("n", "<leader>S", "<cmd>SessionManager load_session<cr>", { desc = "Load Session" })

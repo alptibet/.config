@@ -7,6 +7,7 @@ return {
     local formatting = null_ls.builtins.formatting
     local sources = {
       formatting.prettierd,
+      formatting.stylua
     }
     null_ls.setup {
       sources = sources
