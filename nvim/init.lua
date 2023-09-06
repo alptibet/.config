@@ -9,3 +9,4 @@ vim.api.nvim_create_autocmd("User", {
     require("config.autocommands")
   end,
 })
+vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"

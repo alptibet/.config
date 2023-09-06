@@ -5,16 +5,16 @@ return {
     local config = {
       options = {
         icons_enabled = true,
-        theme = 'auto',
-        component_separators = '',
-        section_separators = '',
+        theme = "auto",
+        component_separators = "",
+        section_separators = "",
       },
       sections = {
         lualine_c = {},
         lualine_x = {},
         lualine_y = {},
-        lualine_z = {}
-      }
+        lualine_z = {},
+      },
     }
     local function insert_left(component)
       table.insert(config.sections.lualine_c, component)
@@ -23,13 +23,13 @@ return {
       table.insert(config.sections.lualine_x, component)
     end
 
-    insert_left { 'filename' }
-    insert_left { 'location' }
-    insert_right {
+    insert_left({ "filename", path = 1 })
+    insert_left({ "location" })
+    insert_right({
       -- Get LSP server name. How to get all?
       function()
-        local msg = 'No Active Lsp'
-        local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+        local msg = "No Active Lsp"
+        local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
         local clients = vim.lsp.get_active_clients()
         if next(clients) == nil then
           return msg
@@ -42,18 +42,18 @@ return {
         end
         return msg
       end,
-      icon = ' LSP:',
-    }
-    insert_right {
-      'o:encoding',
-      fmt = string.upper
-    }
-
-    insert_right {
-      'fileformat',
+      icon = " LSP:",
+    })
+    insert_right({
+      "o:encoding",
       fmt = string.upper,
-      icons_enabled = true
-    }
-    require('lualine').setup(config)
-  end
+    })
+
+    insert_right({
+      "fileformat",
+      fmt = string.upper,
+      icons_enabled = true,
+    })
+    require("lualine").setup(config)
+  end,
 }

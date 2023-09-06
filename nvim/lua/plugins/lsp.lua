@@ -13,6 +13,7 @@ return {
     local MasonLspConfig = require("mason-lspconfig")
     local LspConfig = require("lspconfig")
     local CmpNvimLsp = require("cmp_nvim_lsp")
+    local Navic = require("nvim-navic")
 
     vim.api.nvim_create_autocmd("LspAttach", {
       desc = "LSP actions",
@@ -57,12 +58,19 @@ return {
     })
 
     local capabilities = CmpNvimLsp.default_capabilities()
+    local on_attach = function(client, bufnr)
+      if client.server_capabilities.documentSymbolProvider then
+        Navic.attach(client, bufnr)
+      end
+    end
 
     LspConfig.tsserver.setup({
+      on_attach = on_attach,
       capabilities = capabilities,
     })
 
     LspConfig.rust_analyzer.setup({
+      on_attach = on_attach,
       capabilities = capabilities,
       settings = {
         ["rust-analyzer"] = {
@@ -82,10 +90,12 @@ return {
     })
 
     LspConfig.html.setup({
+      on_attach = on_attach,
       capabilities = capabilities,
     })
 
     LspConfig.lua_ls.setup({
+      on_attach = on_attach,
       capabilities = capabilities,
       settings = {
         Lua = {
@@ -97,10 +107,12 @@ return {
     })
 
     LspConfig.cssls.setup({
+      on_attach = on_attach,
       capabilities = capabilities,
     })
 
     LspConfig.tailwindcss.setup({
+      on_attach = on_attach,
       capabilities = capabilities,
     })
 
