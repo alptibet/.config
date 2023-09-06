@@ -1,11 +1,11 @@
 -- Standard Operations
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", {
-	expr = true,
-	silent = true,
+  expr = true,
+  silent = true,
 })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", {
-	expr = true,
-	silent = true,
+  expr = true,
+  silent = true,
 })
 vim.keymap.set("n", "<leader>w", "<cmd>:w<cr>", { desc = "Save" })
 vim.keymap.set("n", "<leader>q", "<cmd>:q<cr>", { desc = "Quit" })
@@ -54,24 +54,24 @@ vim.keymap.set("n", "<leader>fm", "<cmd>:Telescope marks<cr>")
 
 --Trouble
 vim.keymap.set(
-	"n",
-	"<leader>tw",
-	"<cmd>:TroubleToggle workspace_diagnostics<cr>",
-	{ desc = "Toggle Trouble workspace diagnostics" }
+  "n",
+  "<leader>tw",
+  "<cmd>:TroubleToggle workspace_diagnostics<cr>",
+  { desc = "Toggle Trouble workspace diagnostics" }
 )
 vim.keymap.set(
-	"n",
-	"<leader>td",
-	"<cmd>:TroubleToggle document_diagnostics<cr>",
-	{ desc = "Toggle Trouble document diagnostics" }
+  "n",
+  "<leader>td",
+  "<cmd>:TroubleToggle document_diagnostics<cr>",
+  { desc = "Toggle Trouble document diagnostics" }
 )
 vim.keymap.set("n", "<leader>tq", "<cmd>:TroubleToggle quickfix<cr>", { desc = "Toggle Trouble quickfix" })
 vim.keymap.set("n", "<leader>tr", "<cmd>:TroubleToggle lsp_references<cr>", { desc = "Toggle Trouble lsp references" })
 vim.keymap.set(
-	"n",
-	"<leader>gd",
-	"<cmd>:TroubleToggle lsp_definitions<cr>",
-	{ desc = "Toggle Trouble lsp definitions" }
+  "n",
+  "<leader>gd",
+  "<cmd>:TroubleToggle lsp_definitions<cr>",
+  { desc = "Toggle Trouble lsp definitions" }
 )
 
 --Toggle Lazygit
@@ -82,13 +82,13 @@ vim.keymap.set("n", "<leader>ls", "<cmd>AerialToggle<cr>", { desc = "Toogle Aeri
 
 --Comment
 vim.keymap.set("n", "<leader>/", function()
-	require("Comment.api").toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1)
+  require("Comment.api").toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1)
 end, { desc = "Comment" })
 vim.keymap.set(
-	"v",
-	"<leader>/",
-	"<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
-	{ desc = "Comment Selection" }
+  "v",
+  "<leader>/",
+  "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
+  { desc = "Comment Selection" }
 )
 
 --Session Manager
