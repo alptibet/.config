@@ -56,14 +56,13 @@ return {
         "lua_ls",
         "cssls",
         "html",
-        "eslint",
         "rust_analyzer",
         "tsserver",
       },
     })
 
     MasonNvimDap.setup({
-      ensure_installed = { "node2", "stylua" },
+      ensure_installed = { "node2", "js-debug-adapter" },
       handlers = {}, -- sets up dap in the predefined manner
     })
 
