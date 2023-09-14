@@ -76,6 +76,7 @@ return {
     LspConfig.tsserver.setup({
       on_attach = on_attach,
       capabilities = capabilities,
+      root_dir = require("lspconfig.util").root_pattern(".git"),
     })
 
     LspConfig.rust_analyzer.setup({
@@ -96,6 +97,11 @@ return {
           },
         },
       },
+    })
+
+    LspConfig.eslint.setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
     })
 
     LspConfig.html.setup({
