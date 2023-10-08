@@ -2,7 +2,7 @@ require("config.options")
 require("config.keymaps")
 require("config.lazy")
 
-vim.cmd.colorscheme("kanagawa")
+vim.cmd.colorscheme("material-deep-ocean")
 
 vim.api.nvim_create_autocmd("User", {
   pattern = "VeryLazy",

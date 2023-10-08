@@ -24,6 +24,10 @@ return {
       scroll_up = "<C-b>",
     },
 
+    lightbulb = {
+      enable = false,
+    },
+
     code_action_keys = { quit = "q", exec = "<CR>" },
     rename_action_keys = { quit = "<C-c>", exec = "<CR>" },
     definition_preview_icon = "  ",

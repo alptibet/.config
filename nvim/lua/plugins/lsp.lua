@@ -6,16 +6,11 @@ return {
     { "williamboman/mason-lspconfig.nvim" },
     { "glepnir/lspsaga.nvim" },
     { "onsails/lspkind.nvim" },
-    {
-      "jay-babu/mason-nvim-dap.nvim",
-      dependencies = { "mfussenegger/nvim-dap" },
-    },
   },
 
   config = function()
     local Mason = require("mason")
     local MasonLspConfig = require("mason-lspconfig")
-    local MasonNvimDap = require("mason-nvim-dap")
     local LspConfig = require("lspconfig")
     local CmpNvimLsp = require("cmp_nvim_lsp")
     local Navic = require("nvim-navic")
@@ -61,11 +56,6 @@ return {
       },
     })
 
-    MasonNvimDap.setup({
-      ensure_installed = { "node2", "js-debug-adapter" },
-      handlers = {}, -- sets up dap in the predefined manner
-    })
-
     local capabilities = CmpNvimLsp.default_capabilities()
     local on_attach = function(client, bufnr)
       if client.server_capabilities.documentSymbolProvider then
@@ -75,6 +65,7 @@ return {
 
     LspConfig.tsserver.setup({
       on_attach = on_attach,
+      hint = { enable = true },
       capabilities = capabilities,
       root_dir = require("lspconfig.util").root_pattern(".git"),
     })
