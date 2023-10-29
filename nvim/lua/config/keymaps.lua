@@ -17,8 +17,7 @@ vim.keymap.set("n", "<esc>", "<cmd>noh<cr>")
 
 -- File Explorer
 vim.keymap.set("n", "<leader>o", "<cmd>:NeoTreeFocusToggle<cr>", { desc = "NeoTree Toggle Focus" })
-vim.keymap.set("n", "<leader>r", "<cmd>:NeoTreeReveal<cr>", { desc = "NeoTree Reveal File" })
-vim.keymap.set("n", "<leader>h", "<cmd>:NeoTreeFloat<cr>", { desc = "NeoTree Float" })
+vim.keymap.set("n", "<leader>e", "<cmd>:NeoTreeReveal<cr>", { desc = "NeoTree Reveal File" })
 
 -- Buffer Navigation
 vim.keymap.set("n", "<leader>c", "<cmd>:bd<cr>", { desc = "Close Buffer" })

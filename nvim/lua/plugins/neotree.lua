@@ -42,7 +42,7 @@ return {
         if node.type == "directory" or node:has_children() then
           if not node:is_expanded() then -- if unexpanded, expand
             state.commands.toggle_node(state)
-          else                           -- if expanded and has children, seleect the next child
+          else                      -- if expanded and has children, seleect the next child
             require("neo-tree.ui.renderer").focus_node(state, node:get_child_ids()[1])
           end
         else -- if not a directory just open it
@@ -58,8 +58,8 @@ return {
         hide_dotfiles = false,
         hide_gitignored = false,
         hide_by_name = { "node_modules" },
-        never_show = { ".DS_Store" }
-      }
+        never_show = { ".DS_Store" },
+      },
     },
     window = {
       mappings = {
@@ -67,11 +67,11 @@ return {
         ["<"] = "prev_source",
         [">"] = "next_source",
         h = "parent_or_close",
-        l = "child_or_open"
-      }
-    }
+        l = "child_or_open",
+      },
+    },
   },
   config = function(_, opts)
     require("neo-tree").setup(opts)
-  end
+  end,
 }

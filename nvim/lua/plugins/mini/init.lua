@@ -1,33 +1,11 @@
 return {
   {
-    'echasnovski/mini.pairs',
-    version = '*',
+    "echasnovski/mini.pairs",
+    version = "*",
     event = "InsertEnter",
     config = function()
       require("mini.pairs").setup()
-    end
-  },
-  {
-    'echasnovski/mini.files',
-    version = false,
-    keys = { {
-      "<leader>e",
-      function()
-        require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
-      end,
-      desc = "Mini Files"
-    },
-      {
-        "<leader>E",
-        function()
-          require("mini.files").open(vim.loop.cwd(), true)
-        end,
-        desc = "Mini Files cwd"
-      }
-    },
-    config = function()
-      require("mini.files").setup()
-    end
+    end,
   },
   {
     "echasnovski/mini.starter",
@@ -39,7 +17,7 @@ return {
         "    (o o)         (o o)      -  (O o)  -         (o o)         (o o)         (o o)         (o o)         (o o)     ",
         "ooO--(_)--Ooo-ooO--(_)--Ooo-ooO--(_)--Ooo----ooO--(_)--Ooo-ooO--(_)--Ooo-ooO--(_)--Ooo-ooO--(_)--Ooo-ooO--(_)--Ooo-",
       }, "\n")
-      local starter = require('mini.starter')
+      local starter = require("mini.starter")
       local config = {
         header = logo,
         content_hooks = {
@@ -63,5 +41,5 @@ return {
       local starter = require("mini.starter")
       starter.setup(config)
     end,
-  }
+  },
 }
