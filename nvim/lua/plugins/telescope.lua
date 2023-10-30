@@ -10,6 +10,9 @@ return {
   config = function()
     require('telescope').setup({
       defaults = {
+        file_ignore_patterns = {
+          "node_modules", ".git"
+        },
         mappings = {
           i = {
             ["<C-k>"] = require('telescope.actions').move_selection_previous,
@@ -21,7 +24,8 @@ return {
       },
       pickers = {
         find_files = {
-          theme = "dropdown"
+          theme = "dropdown",
+          hidden = true
         },
         live_grep = {
           theme = "dropdown"

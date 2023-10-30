@@ -8,6 +8,33 @@ return {
     end,
   },
   {
+    "echasnovski/mini.files",
+    version = false,
+    keys = {
+      {
+        "<leader>e",
+        function()
+          require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
+        end,
+        desc = "Mini Files",
+      },
+      {
+        "<leader>E",
+        function()
+          require("mini.files").open(vim.loop.cwd(), true)
+        end,
+        desc = "Mini Files cwd",
+      },
+    },
+    config = function()
+      require("mini.files").setup({
+        mappings = {
+          reset = "<TAB>",
+        },
+      })
+    end,
+  },
+  {
     "echasnovski/mini.starter",
     version = false, -- wait till new 0.7.0 release to put it back on semver
     event = "VimEnter",
