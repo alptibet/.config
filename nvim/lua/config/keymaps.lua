@@ -20,7 +20,7 @@ vim.keymap.set("n", "<esc>", "<cmd>noh<cr>")
 -- vim.keymap.set("n", "<leader>e", "<cmd>:NeoTreeReveal<cr>", { desc = "NeoTree Reveal File" })
 
 -- Buffer Navigation
-vim.keymap.set("n", "<leader>c", "<cmd>:bd<cr>", { desc = "Close Buffer" })
+vim.keymap.set("n", "<leader>c", "<cmd>:bp|bd #<cr>", { desc = "Close Buffer" })
 vim.keymap.set("n", "<leader>x", "<cmd>:BufferLineCloseOthers<cr>", { desc = "Close Other Buffers" })
 vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Next buffer" })
