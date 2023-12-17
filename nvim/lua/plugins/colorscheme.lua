@@ -15,4 +15,14 @@ return {
       })
     end,
   },
+  {
+    "marko-cerovac/material.nvim",
+    config = function()
+      require("material").setup({
+        disable = {
+          background = true,
+        }
+      })
+    end
+  }
 }

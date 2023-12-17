@@ -12,7 +12,7 @@ end
 
 -- This is where you actually apply your config choices
 
-config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Regular" })
+config.font = wezterm.font("Liga SFMono Nerd Font", { weight = "Light" })
 config.font_size = 13
 config.line_height = 1.2
 config.window_padding = {
