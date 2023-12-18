@@ -11,6 +11,7 @@ return {
   config = function()
     local cmp = require("cmp")
     local luasnip = require("luasnip")
+    local lspkind = require("lspkind")
     local snippets = require("luasnip.loaders.from_vscode")
     local cmp_select_opts = { behavior = cmp.SelectBehavior.Select }
 
