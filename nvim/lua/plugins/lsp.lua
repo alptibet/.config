@@ -70,11 +70,9 @@ return {
       root_dir = require("lspconfig.util").root_pattern(".git"),
     })
 
-    LspConfig.prismals.setup({
+    LspConfig.astro.setup({
       on_attach = on_attach,
-      hint = { enable = true },
       capabilities = capabilities,
-      root_dir = require("lspconfig.util").root_pattern(".git"),
     })
 
     LspConfig.rust_analyzer.setup({

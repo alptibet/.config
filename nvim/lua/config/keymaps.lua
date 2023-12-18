@@ -9,15 +9,11 @@ vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", {
 })
 vim.keymap.set("n", "<leader>w", "<cmd>:w<cr>", { desc = "Save" })
 vim.keymap.set("n", "<leader>q", "<cmd>:q<cr>", { desc = "Quit" })
-vim.keymap.set("n", "|", "<cmd>vsplit<cr>", { desc = "Vertical Split" })
-vim.keymap.set("n", "\\", "<cmd>split<cr>", { desc = "Horizontal Split" })
+vim.keymap.set("n", "\\", "<cmd>vsplit<cr>", { desc = "Vertical Split" })
+vim.keymap.set("n", "|", "<cmd>split<cr>", { desc = "Horizontal Split" })
 
 -- Clear search highlights
 vim.keymap.set("n", "<esc>", "<cmd>noh<cr>")
-
--- File Explorer
--- vim.keymap.set("n", "<leader>o", "<cmd>:NeoTreeFocusToggle<cr>", { desc = "NeoTree Toggle Focus" })
--- vim.keymap.set("n", "<leader>e", "<cmd>:NeoTreeReveal<cr>", { desc = "NeoTree Reveal File" })
 
 -- Buffer Navigation
 vim.keymap.set("n", "<leader>c", "<cmd>:bp|bd #<cr>", { desc = "Close Buffer" })
@@ -36,6 +32,13 @@ vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
+
+--Split Resizing
+vim.keymap.set("n", "<S-A-l>", "<C-w><")
+vim.keymap.set("n", "<S-A-h>", "<C-w>>")
+vim.keymap.set("n", "<S-A-=>", "<C-w>=")
+vim.keymap.set("n", "<S-A-j>", "<C-w>-")
+vim.keymap.set("n", "<S-A-k>", "<C-w>+")
 
 -- Enter to change word
 vim.keymap.set("n", "<CR>", "ciw")

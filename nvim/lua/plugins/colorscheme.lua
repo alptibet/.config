@@ -21,7 +21,9 @@ return {
       require("material").setup({
         disable = {
           background = true,
-        }
+          borders = false,
+        },
+        lualine_style = "stealth"
       })
     end
   }
