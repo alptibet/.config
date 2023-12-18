@@ -79,9 +79,6 @@ vim.keymap.set(
 --Toggle Lazygit
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "Toggle Lazygit" })
 
---Toggle Aerial
-vim.keymap.set("n", "<leader>ls", "<cmd>AerialToggle<cr>", { desc = "Toogle Aerial" })
-
 --Comment
 vim.keymap.set("n", "<leader>/", function()
   require("Comment.api").toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1)

@@ -23,7 +23,19 @@ return {
           background = true,
           borders = false,
         },
-        lualine_style = "stealth"
+        lualine_style = "stealth",
+        plugins = {
+          "fidget",
+          "mini",
+          "illuminate",
+          "indent-blankline",
+          "lspsaga",
+          "nvim-cmp",
+          "nvim-navic",
+          "nvim-web-devicons",
+          "telescope",
+          "trouble"
+        }
       })
     end
   }

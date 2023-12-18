@@ -49,6 +49,7 @@ opt.updatetime = 200               -- Save swap file and trigger CursorHold
 opt.wildmode = "longest:full,full" -- Command-line completion mode
 opt.winminwidth = 5                -- Minimum window width
 opt.wrap = false                   -- Disable line wrap
+opt.pumblend = 0
 
 if vim.g.neovide then
   vim.o.guifont = "JetBrainsMono Nerd Font Mono:h13"

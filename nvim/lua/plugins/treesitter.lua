@@ -32,5 +32,6 @@ return {
   config = function(_, opts)
     require("nvim-treesitter.configs").setup(opts)
     require("ts_context_commentstring").setup()
+    vim.g.skip_ts_context_commentstring_module = true
   end,
 }
