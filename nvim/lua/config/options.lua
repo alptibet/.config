@@ -55,3 +55,7 @@ if vim.g.neovide then
   vim.o.guifont = "JetBrainsMono Nerd Font Mono:h13"
   vim.opt.linespace = 8
 end
+
+vim.cmd([[let &t_Cs = "\e[4:3m"]])
+vim.cmd([[let &t_Ce = "\e[4:0m"]])
+vim.g.skip_ts_context_commentstring_module = true
