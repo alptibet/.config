@@ -1,8 +1,5 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  dependencies = {
-    "JoosepAlviste/nvim-ts-context-commentstring",
-  },
   build = ":TSUpdate",
   event = { "BufReadPost", "BufNewFile" },
   cmd = { "TSUpdateSync" },
@@ -30,8 +27,8 @@ return {
     },
   },
   config = function(_, opts)
+    vim.g.skip_ts_context_commentstring_module = true
     require("nvim-treesitter.configs").setup(opts)
     require("ts_context_commentstring").setup()
-    vim.g.skip_ts_context_commentstring_module = true
   end,
 }
