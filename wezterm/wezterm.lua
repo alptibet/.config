@@ -9,12 +9,11 @@ local config = {}
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
-
 -- This is where you actually apply your config choices
 
 config.font = wezterm.font("Liga SFMono Nerd Font", { weight = "Light" })
-config.color_scheme = "solarized-osaka"
-config.window_background_opacity = 0.8
+-- config.color_scheme = "solarized"
+config.window_background_opacity = 0.9
 config.font_size = 13
 config.line_height = 1.2
 config.window_padding = {
@@ -24,7 +23,6 @@ config.window_padding = {
   bottom = 0,
 }
 
--- config.color_scheme = "nordic"
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
 config.keys = {

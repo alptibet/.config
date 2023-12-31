@@ -52,7 +52,7 @@ bg_color = "#7aa2f7"
 fg_color = "#7aa2f7"
 bg_color = "#191b28"
 
-[metadata]
-aliases = []
-author = "folke"
-name = "Tokyo Night"
+# [metadata]
+# aliases = []
+# author = "folke"
+# name = "Tokyo Night"
