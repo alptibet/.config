@@ -70,6 +70,11 @@ return {
       root_dir = require("lspconfig.util").root_pattern(".git"),
     })
 
+    LspConfig.gopls.setup({
+      on_attach = on_attach,
+      capabilities = capabilities
+    })
+
     LspConfig.astro.setup({
       on_attach = on_attach,
       capabilities = capabilities,

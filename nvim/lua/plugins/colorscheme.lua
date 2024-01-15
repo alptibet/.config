@@ -15,36 +15,36 @@ return {
       })
     end,
   },
+  -- {
+  --   "marko-cerovac/material.nvim",
+  --   config = function()
+  --     require("material").setup({
+  --       disable = {
+  --         background = true,
+  --         borders = false,
+  --       },
+  --       lualine_style = "stealth",
+  --       plugins = {
+  --         "fidget",
+  --         "mini",
+  --         "illuminate",
+  --         "indent-blankline",
+  --         "lspsaga",
+  --         "nvim-cmp",
+  --         "nvim-navic",
+  --         "nvim-web-devicons",
+  --         "telescope",
+  --         "trouble"
+  --       }
+  --     })
+  --   end
+  -- },
   {
-    "marko-cerovac/material.nvim",
+    "aktersnurra/no-clown-fiesta.nvim",
     config = function()
-      require("material").setup({
-        disable = {
-          background = true,
-          borders = false,
-        },
-        lualine_style = "stealth",
-        plugins = {
-          "fidget",
-          "mini",
-          "illuminate",
-          "indent-blankline",
-          "lspsaga",
-          "nvim-cmp",
-          "nvim-navic",
-          "nvim-web-devicons",
-          "telescope",
-          "trouble"
-        }
+      require("no-clown-fiesta").setup({
+        transparent = true,
       })
     end
-  },
-  {
-    "craftzdog/solarized-osaka.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {
-      transparent = true
-    },
   }
 }
