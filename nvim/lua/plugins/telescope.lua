@@ -1,37 +1,52 @@
 return {
   "nvim-telescope/telescope.nvim",
+  tag = '0.1.2',
   dependencies = {
-    { "nvim-telescope/telescope-fzf-native.nvim", enabled = vim.fn.executable "make" == 1, build = "make" },
+    'nvim-lua/plenary.nvim',
+    'BurntSushi/ripgrep'
   },
   cmd = "Telescope",
-  opts = function()
-    local actions = require "telescope.actions"
-    local get_icon = require("astronvim.utils").get_icon
-    return {
+  event = "VeryLazy",
+  config = function()
+    require('telescope').setup({
       defaults = {
-        git_worktrees = vim.g.git_worktrees,
-        prompt_prefix = get_icon("Selected", 1),
-        selection_caret = get_icon("Selected", 1),
-        path_display = { "truncate" },
-        sorting_strategy = "ascending",
-        layout_config = {
-          horizontal = { prompt_position = "top", preview_width = 0.55 },
-          vertical = { mirror = false },
-          width = 0.87,
-          height = 0.80,
-          preview_cutoff = 120,
+        file_ignore_patterns = {
+          "node_modules", ".git"
         },
         mappings = {
           i = {
-            ["<C-n>"] = actions.cycle_history_next,
-            ["<C-p>"] = actions.cycle_history_prev,
-            ["<C-j>"] = actions.move_selection_next,
-            ["<C-k>"] = actions.move_selection_previous,
-          },
-          n = { q = actions.close },
+            ["<C-k>"] = require('telescope.actions').move_selection_previous,
+            ["<C-j>"] = require('telescope.actions').move_selection_next,
+            ["<C-c>"] = require('telescope.actions').close,
+            ["<C-u>"] = false
+          }
         },
       },
-    }
-  end,
-  config = require "plugins.configs.telescope",
+      pickers = {
+        find_files = {
+          theme = "dropdown",
+          hidden = true
+        },
+        live_grep = {
+          theme = "dropdown"
+        },
+        grep_string = {
+          theme = "dropdown"
+        },
+        buffers = {
+          theme = "dropdown"
+        },
+        marks = {
+          theme = "dropdown"
+        },
+        lsp_references = {
+          theme = "dropdown",
+          initial_mode = "normal"
+        },
+        diagnostics = {
+          theme = "dropdown"
+        }
+      }
+    })
+  end
 }
