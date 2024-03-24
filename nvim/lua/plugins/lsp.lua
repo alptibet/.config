@@ -14,6 +14,8 @@ return {
     local LspConfig = require("lspconfig")
     local CmpNvimLsp = require("cmp_nvim_lsp")
     local Navic = require("nvim-navic")
+    local servers = { "html", "cssls", "tsserver", "gopls", "rust_analyzer", "lua_ls" }
+    local capabilities = CmpNvimLsp.default_capabilities()
 
     vim.api.nvim_create_autocmd("LspAttach", {
       desc = "LSP actions",
@@ -56,11 +58,17 @@ return {
       },
     })
 
-    local capabilities = CmpNvimLsp.default_capabilities()
     local on_attach = function(client, bufnr)
       if client.server_capabilities.documentSymbolProvider then
         Navic.attach(client, bufnr)
       end
+    end
+
+    for _, lsp in ipairs(servers) do
+      LspConfig[lsp].setup {
+        on_attach = on_attach,
+        capabilities = capabilities,
+      }
     end
 
     LspConfig.tsserver.setup({
@@ -68,16 +76,6 @@ return {
       hint = { enable = true },
       capabilities = capabilities,
       root_dir = require("lspconfig.util").root_pattern(".git"),
-    })
-
-    LspConfig.gopls.setup({
-      on_attach = on_attach,
-      capabilities = capabilities
-    })
-
-    LspConfig.astro.setup({
-      on_attach = on_attach,
-      capabilities = capabilities,
     })
 
     LspConfig.rust_analyzer.setup({
@@ -100,21 +98,6 @@ return {
       },
     })
 
-    LspConfig.eslint.setup({
-      on_attach = on_attach,
-      capabilities = capabilities,
-    })
-
-    LspConfig.html.setup({
-      on_attach = on_attach,
-      capabilities = capabilities,
-    })
-
-    LspConfig.marksman.setup({
-      on_attach = on_attach,
-      capabilities = capabilities,
-    })
-
     LspConfig.lua_ls.setup({
       on_attach = on_attach,
       capabilities = capabilities,
@@ -125,16 +108,6 @@ return {
           },
         },
       },
-    })
-
-    LspConfig.cssls.setup({
-      on_attach = on_attach,
-      capabilities = capabilities,
-    })
-
-    LspConfig.tailwindcss.setup({
-      on_attach = on_attach,
-      capabilities = capabilities,
     })
 
     LspConfig.emmet_language_server.setup({
