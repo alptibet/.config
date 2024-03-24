@@ -11,7 +11,7 @@ if wezterm.config_builder then
 end
 -- This is where you actually apply your config choices
 
-config.font = wezterm.font("MonaSpace Krypton", { weight = "Regular" })
+config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Regular" })
 -- config.color_scheme = "solarized"
 config.window_background_opacity = 0.9
 config.font_size = 13
