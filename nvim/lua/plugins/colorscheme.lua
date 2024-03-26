@@ -15,30 +15,9 @@ return {
       })
     end,
   },
-  -- {
-  --   "marko-cerovac/material.nvim",
-  --   config = function()
-  --     require("material").setup({
-  --       disable = {
-  --         background = true,
-  --         borders = false,
-  --       },
-  --       lualine_style = "stealth",
-  --       plugins = {
-  --         "fidget",
-  --         "mini",
-  --         "illuminate",
-  --         "indent-blankline",
-  --         "lspsaga",
-  --         "nvim-cmp",
-  --         "nvim-navic",
-  --         "nvim-web-devicons",
-  --         "telescope",
-  --         "trouble"
-  --       }
-  --     })
-  --   end
-  -- },
+  {
+    "EdenEast/nightfox.nvim"
+  },
   {
     "aktersnurra/no-clown-fiesta.nvim",
     config = function()
