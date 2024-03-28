@@ -12,8 +12,7 @@ end
 -- This is where you actually apply your config choices
 
 config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Regular" })
-config.color_scheme = "nightfox"
-config.window_background_opacity = 0.9
+config.color_scheme = "carbonfox"
 config.font_size = 13
 config.line_height = 1.2
 config.window_padding = {
