@@ -42,7 +42,7 @@ vim.keymap.set("n", "<S-A-k>", "<C-w>+")
 
 -- Enter to change word
 vim.keymap.set("n", "<CR>", "ciw")
-vim.keymap.set("i", "<C-CR>", "<esc>o")
+vim.keymap.set("i", "<C-CR>", "<C-o>o")
 --Telescope
 vim.keymap.set("n", "<leader>ff", "<cmd>:Telescope find_files<cr>")
 vim.keymap.set("n", "<leader>fd", "<cmd>:Telescope diagnostics<cr>")

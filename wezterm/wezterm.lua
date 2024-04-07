@@ -11,7 +11,9 @@ if wezterm.config_builder then
 end
 -- This is where you actually apply your config choices
 
+config.window_background_opacity = 0.95
 config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Regular" })
+config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 config.color_scheme = "carbonfox"
 config.font_size = 13
 config.line_height = 1.2

@@ -24,4 +24,4 @@ end
 -- stop snippets when you leave to normal mode
 vim.api.nvim_command([[
       autocmd ModeChanged * lua leave_snippet()
-  ]])
+ ]])
