@@ -16,13 +16,16 @@ return {
     end,
   },
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    'AlexvZyl/nordic.nvim',
+    lazy = false,
     priority = 1000,
     config = function()
-      require("catppuccin").setup({
-        transparent_background = true,
-        show_end_of_buffer = false
+      require("nordic").setup({
+        transparent_bg = true,
+        swap_backgrounds = true,
+        telescope = {
+          style = "classic"
+        }
       })
     end
   },

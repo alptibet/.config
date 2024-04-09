@@ -1,4 +1,0 @@
-return {
-  "aikow/base.nvim",
-  opts = {},
-}
