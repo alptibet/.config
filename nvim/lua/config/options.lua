@@ -1,5 +1,6 @@
 local opt = vim.opt
 
+vim.g.base16_colorspace = 256
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
