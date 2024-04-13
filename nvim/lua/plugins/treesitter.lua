@@ -13,7 +13,15 @@ return {
       enable = true,
       disable = function(_, bufnr) return vim.api.nvim_buf_line_count(bufnr) > 10000 end,
     },
-    incremental_selection = { enable = true },
+    incremental_selection = {
+      enable = true,
+      keymaps = {
+        init_selection = "S",
+        scope_incremental = "S",
+        node_incremental = "<TAB>",
+        node_decremental = "<S-TAB>",
+      }
+    },
     indent = { enable = true },
     textobjects = {
       select = {
