@@ -15,12 +15,12 @@ return {
     },
     incremental_selection = {
       enable = true,
-      keymaps = {
-        init_selection = "S",
-        scope_incremental = "S",
-        node_incremental = "<TAB>",
-        node_decremental = "<S-TAB>",
-      }
+      -- keymaps = {
+      --   init_selection = "S",
+      --   scope_incremental = "S",
+      --   node_incremental = "<TAB>",
+      --   node_decremental = "<S-TAB>",
+      -- }
     },
     indent = { enable = true },
     textobjects = {
