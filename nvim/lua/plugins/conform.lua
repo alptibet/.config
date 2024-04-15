@@ -12,6 +12,7 @@ return {
         html = { { "prettierd", "prettier" } },
         json = { { "prettierd", "prettier" } },
         yaml = { { "prettierd", "prettier" } },
+        go = { { "gofmt" } }
       },
       format_on_save = {
         lsp_fallback = true,
