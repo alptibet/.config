@@ -9,6 +9,6 @@ normal ={ family =  "JetBrainsMono Nerd Font Mono", style="Light" }
 bold.family = "JetBrainsMono Nerd Font Mono"
 italic.family = "JetBrainsMono Nerd Font Mono"
 bold_italic.family = "JetBrainsMono Nerd Font Mono"
-offset = {x=0, y=4}
-glyph_offset = {x=0 , y=4}
-size = 14.0
+# offset = {x=0, y=4}
+# glyph_offset = {x=0 , y=4}
+size = 13.0
