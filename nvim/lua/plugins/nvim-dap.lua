@@ -19,14 +19,16 @@ dap.configurations.go = {
     type = "delve",
     name = "Debug",
     request = "launch",
-    program = "${file}"
+    program = "${file}",
+    cwd = vim.fn.getcwd()
   },
   {
     type = "delve",
     name = "Debug test", -- configuration for debugging test files
     request = "launch",
     mode = "test",
-    program = "${file}"
+    program = "${file}",
+    cwd = vim.fn.getcwd()
   },
   -- works with go.mod packages and sub packages 
   {
@@ -34,7 +36,8 @@ dap.configurations.go = {
     name = "Debug test (go.mod)",
     request = "launch",
     mode = "test",
-    program = "./${relativeFileDirname}"
+    program = "./${relativeFileDirname}",
+    cwd = vim.fn.getcwd()
   }
 }
   end,
