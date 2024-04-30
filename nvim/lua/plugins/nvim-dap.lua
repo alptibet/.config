@@ -19,8 +19,14 @@ dap.configurations.go = {
     type = "delve",
     name = "Debug",
     request = "launch",
-    program = "${file}",
-    cwd = vim.fn.getcwd()
+    program = function()
+		return vim.fn.input(
+			"Path to executable: ",
+			vim.fn.getcwd() .. "/",
+			"file"
+		)
+	end,
+     cwd = vim.fn.getcwd()
   },
   {
     type = "delve",
