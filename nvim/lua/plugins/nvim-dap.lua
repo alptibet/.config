@@ -26,7 +26,8 @@ dap.configurations.go = {
 			"file"
 		)
 	end,
-     cwd = vim.fn.getcwd()
+    -- program = "./${relativeFileDirname}", --can use this line if running from main
+    cwd = vim.fn.getcwd()
   },
   {
     type = "delve",
