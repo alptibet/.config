@@ -4,12 +4,12 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
   end,
 })
 
-local session = require("session_manager")
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-  callback = function()
-    session.autosave_session()
-  end,
-})
+-- local session = require("session_manager")
+-- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+--   callback = function()
+--     session.autosave_session()
+--   end,
+-- })
 
 function leave_snippet()
   if

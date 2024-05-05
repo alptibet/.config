@@ -12,12 +12,13 @@ return {
         html = { { "prettierd", "prettier" } },
         json = { { "prettierd", "prettier" } },
         yaml = { { "prettierd", "prettier" } },
-        -- go = { { "gofmt" } }
+        go = { { "gofmt" } }
       },
       format_on_save = {
-        lsp_fallback = true,
-        async = false,
+        -- lsp_fallback = true,
+        async = true,
         timeout_ms = 500,
+        quiet=true
       },
     })
   end,

@@ -50,11 +50,10 @@ vim.keymap.set("n", "<leader>fb", "<cmd>:Telescope buffers<cr>")
 vim.keymap.set("n", "<leader>fo", "<cmd>:Telescope oldfiles<cr>")
 vim.keymap.set("n", "<leader>:", "<cmd>:Telescope command_history<cr>")
 vim.keymap.set("n", "<leader>ft", "<cmd>:Telescope live_grep<cr>")
-vim.keymap.set("n", "<leader>fs", "<cmd>:Telescope grep_string<cr>")
 vim.keymap.set("n", "<leader>fr", "<cmd>:Telescope lsp_references<cr>")
 vim.keymap.set("n", "<leader>fm", "<cmd>:Telescope marks<cr>")
-vim.keymap.set("n", "<leader>ls", "<cmd>:Telescope lsp_document_symbols<cr>")
-vim.keymap.set("n", "<leader>ws", "<cmd>:Telescope lsp_workspace_symbols<cr>")
+vim.keymap.set("n", "<leader>fs", "<cmd>:Telescope lsp_document_symbols<cr>")
+vim.keymap.set("n", "<leader>fS", "<cmd>:Telescope lsp_workspace_symbols<cr>")
 
 --Trouble
 vim.keymap.set(
