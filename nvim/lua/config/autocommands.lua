@@ -4,13 +4,6 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 	end,
 })
 
--- local session = require("session_manager")
--- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
---   callback = function()
---     session.autosave_session()
---   end,
--- })
-
 function leave_snippet()
 	if
 		((vim.v.event.old_mode == "s" and vim.v.event.new_mode == "n") or vim.v.event.old_mode == "i")
