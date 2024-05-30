@@ -4,6 +4,7 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 	end,
 })
 
+-- stop snippets when you leave to normal mode
 function leave_snippet()
 	if
 		((vim.v.event.old_mode == "s" and vim.v.event.new_mode == "n") or vim.v.event.old_mode == "i")
@@ -14,7 +15,6 @@ function leave_snippet()
 	end
 end
 
--- stop snippets when you leave to normal mode
 vim.api.nvim_command([[
       autocmd ModeChanged * lua leave_snippet()
  ]])
