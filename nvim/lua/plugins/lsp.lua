@@ -68,6 +68,18 @@ return {
 				on_attach = on_attach,
 				capabilities = capabilities,
 			})
+
+			if lsp == "lua_ls" then
+				LspConfig.lua_ls.setup({
+					settings = {
+						Lua = {
+							diagnostics = {
+								globals = { "vim" },
+							},
+						},
+					},
+				})
+			end
 		end
 
 		-- LspConfig.tsserver.setup({
