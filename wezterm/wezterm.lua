@@ -12,7 +12,7 @@ end
 -- This is where you actually apply your config choices
 
 config.window_background_opacity = 0.95
-config.font = wezterm.font("CommitMono", { weight = "Regular" })
+config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Medium" })
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.color_scheme = "Default Dark (base16)"
 config.font_size = 14

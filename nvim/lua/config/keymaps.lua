@@ -61,23 +61,18 @@ vim.keymap.set("n", "<leader>fS", "<cmd>:Telescope lsp_workspace_symbols<cr>")
 vim.keymap.set(
 	"n",
 	"<leader>tw",
-	"<cmd>:TroubleToggle workspace_diagnostics<cr>",
+	"<cmd>:Trouble workspace_diagnostics<cr>",
 	{ desc = "Toggle Trouble workspace diagnostics" }
 )
 vim.keymap.set(
 	"n",
 	"<leader>td",
-	"<cmd>:TroubleToggle document_diagnostics<cr>",
+	"<cmd>:Trouble document_diagnostics<cr>",
 	{ desc = "Toggle Trouble document diagnostics" }
 )
-vim.keymap.set("n", "<leader>tq", "<cmd>:TroubleToggle quickfix<cr>", { desc = "Toggle Trouble quickfix" })
-vim.keymap.set("n", "<leader>tr", "<cmd>:TroubleToggle lsp_references<cr>", { desc = "Toggle Trouble lsp references" })
-vim.keymap.set(
-	"n",
-	"<leader>gd",
-	"<cmd>:TroubleToggle lsp_definitions<cr>",
-	{ desc = "Toggle Trouble lsp definitions" }
-)
+vim.keymap.set("n", "<leader>tq", "<cmd>:Trouble quickfix<cr>", { desc = "Toggle Trouble quickfix" })
+vim.keymap.set("n", "<leader>tr", "<cmd>:Trouble lsp_references<cr>", { desc = "Toggle Trouble lsp references" })
+vim.keymap.set("n", "<leader>gd", "<cmd>:Trouble lsp_definitions<cr>", { desc = "Toggle Trouble lsp definitions" })
 
 --Toggle Lazygit
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "Toggle Lazygit" })
