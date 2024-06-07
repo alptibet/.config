@@ -28,7 +28,7 @@ opt.scrolloff = 4 -- Lines of context
 opt.startofline = true
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
 opt.shiftround = true -- Round indent
-opt.shiftwidth = 2 -- Size of an indent
+opt.shiftwidth = 4 -- Size of an indent
 opt.shortmess:append({
 	W = true,
 	I = true,
