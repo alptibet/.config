@@ -25,27 +25,27 @@ return {
 			},
 			pickers = {
 				find_files = {
-					theme = "dropdown",
+					theme = "ivy",
 					hidden = true,
 				},
 				live_grep = {
-					theme = "dropdown",
+					theme = "ivy",
 				},
 				grep_string = {
-					theme = "dropdown",
+					theme = "ivy",
 				},
 				buffers = {
-					theme = "dropdown",
+					theme = "ivy",
 				},
 				marks = {
-					theme = "dropdown",
+					theme = "ivy",
 				},
 				lsp_references = {
-					theme = "dropdown",
+					theme = "ivy",
 					initial_mode = "normal",
 				},
 				diagnostics = {
-					theme = "dropdown",
+					theme = "ivy",
 				},
 			},
 		})
