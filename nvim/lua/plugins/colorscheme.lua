@@ -10,14 +10,9 @@ return {
 		end,
 	},
 	{
-		"AlexvZyl/nordic.nvim",
+		"sho-87/kanagawa-paper.nvim",
 		lazy = false,
 		priority = 1000,
-		config = function()
-			require("nordic").setup({
-				-- transparent_bg = true,
-				swap_backgrounds = true,
-			})
-		end,
+		opts = {},
 	},
 }
