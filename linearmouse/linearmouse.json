@@ -1,13 +1,17 @@
 {
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
   "schemes" : [
     {
       "scrolling" : {
         "acceleration" : {
           "vertical" : 1
         },
+        "reverse" : {
+          "vertical" : true
+        },
         "speed" : {
-          "horizontal" : 0,
-          "vertical" : 10
+          "vertical" : 10,
+          "horizontal" : 0
         },
         "modifiers" : {
           "vertical" : {
@@ -15,72 +19,69 @@
               "type" : "preventDefault"
             }
           }
-        },
-        "reverse" : {
-          "vertical" : true
         }
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "action" : "missionControl.spaceRight",
+            "button" : 3,
+            "command" : false,
+            "shift" : false,
+            "option" : false,
+            "control" : false
+          },
+          {
+            "shift" : false,
+            "command" : false,
+            "option" : false,
+            "action" : "missionControl.spaceLeft",
+            "control" : false,
+            "button" : 4
+          }
+        ]
       },
       "if" : {
         "device" : {
-          "productID" : "0x2f",
-          "vendorID" : "0x258a",
           "productName" : "2.4G Wireless Receiver",
-          "category" : "mouse"
+          "category" : "mouse",
+          "productID" : "0x2f",
+          "vendorID" : "0x258a"
         }
       },
       "pointer" : {
         "disableAcceleration" : false,
         "acceleration" : 3
-      },
-      "buttons" : {
-        "mappings" : [
-          {
-            "button" : 3,
-            "control" : false,
-            "action" : "missionControl.spaceRight",
-            "option" : false,
-            "shift" : false,
-            "command" : false
-          },
-          {
-            "action" : "missionControl.spaceLeft",
-            "shift" : false,
-            "control" : false,
-            "button" : 4,
-            "command" : false,
-            "option" : false
-          }
-        ]
       }
     },
     {
+      "if" : {
+        "device" : {
+          "vendorID" : "0x3434",
+          "category" : "mouse",
+          "productID" : "0xd03f",
+          "productName" : "Keychron M6 "
+        }
+      },
       "buttons" : {
         "mappings" : [
           {
             "shift" : false,
             "button" : 3,
             "option" : false,
-            "control" : false,
             "action" : "missionControl.spaceRight",
-            "command" : false
+            "command" : false,
+            "control" : false
           },
           {
-            "shift" : false,
-            "button" : 4,
             "option" : false,
+            "shift" : false,
+            "action" : "missionControl.spaceLeft",
             "control" : false,
             "command" : false,
-            "action" : "missionControl.spaceLeft"
+            "button" : 4
           }
         ]
-      },
-      "if" : {
-        "device" : {
-          "vendorID" : "0x3434",
-          "productName" : "Keychron M6 ",
-          "productID" : "0xd03f",
-          "category" : "mouse"
-        }
       },
       "scrolling" : {
         "speed" : {
@@ -92,6 +93,37 @@
       }
     },
     {
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "speed" : {
+          "vertical" : 10
+        },
+        "reverse" : {
+          "vertical" : true
+        }
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "command" : false,
+            "action" : "missionControl.spaceRight",
+            "button" : 3,
+            "control" : false,
+            "shift" : false,
+            "option" : false
+          },
+          {
+            "shift" : false,
+            "option" : false,
+            "button" : 4,
+            "control" : false,
+            "action" : "missionControl.spaceLeft",
+            "command" : false
+          }
+        ]
+      },
       "if" : {
         "device" : {
           "productID" : "0xd031",
@@ -99,39 +131,7 @@
           "category" : "mouse",
           "vendorID" : "0x3434"
         }
-      },
-      "buttons" : {
-        "mappings" : [
-          {
-            "action" : "missionControl.spaceRight",
-            "shift" : false,
-            "command" : false,
-            "button" : 3,
-            "option" : false,
-            "control" : false
-          },
-          {
-            "command" : false,
-            "control" : false,
-            "shift" : false,
-            "button" : 4,
-            "action" : "missionControl.spaceLeft",
-            "option" : false
-          }
-        ]
-      },
-      "scrolling" : {
-        "reverse" : {
-          "vertical" : true
-        },
-        "speed" : {
-          "vertical" : 10
-        },
-        "acceleration" : {
-          "vertical" : 1
-        }
       }
     }
-  ],
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5"
+  ]
 }
