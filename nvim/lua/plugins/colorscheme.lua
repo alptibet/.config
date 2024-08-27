@@ -1,4 +1,9 @@
 return {
-  "folke/tokyonight.nvim",
-  name = "tokyonight",
+  "scottmckendry/cyberdream.nvim",
+  lazy = false,
+  priority = 1000,
+
+  opts = {
+    transparent = true,
+  },
 }

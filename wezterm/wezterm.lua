@@ -8,12 +8,12 @@ if wezterm.config_builder then
 end
 
 config = {
-	window_background_opacity = 0.99,
-	font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Medium" }),
+	window_background_opacity = 0.85,
+	font = wezterm.font("Monaspace Neon", { weight = "Medium" }),
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
-	color_scheme = "tokyonight_night",
+	color_scheme = "Tomorrow Night (Gogh)",
 	font_size = 14,
-	line_height = 1.05,
+	line_height = 1.2,
 	window_padding = {
 		left = 0,
 		right = 0,
