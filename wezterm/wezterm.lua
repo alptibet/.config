@@ -11,7 +11,7 @@ config = {
 	window_background_opacity = 0.85,
 	font = wezterm.font("Monaspace Neon", { weight = "Medium" }),
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
-	color_scheme = "Tomorrow Night (Gogh)",
+	color_scheme = "cyberdream",
 	font_size = 14,
 	line_height = 1.2,
 	window_padding = {
