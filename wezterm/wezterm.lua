@@ -8,6 +8,7 @@ if wezterm.config_builder then
 end
 
 config = {
+	default_cursor_style = "SteadyBlock",
 	window_background_opacity = 0.85,
 	font = wezterm.font("Monaspace Neon", { weight = "Medium" }),
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
