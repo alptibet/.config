@@ -1,18 +1,15 @@
 return {
-  {
-    "scottmckendry/cyberdream.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = function(_, opts)
-      opts.transparent = true
-      opts.italic_comments = true
-      opts.borderless_telescope = false
-    end,
+  "scottmckendry/cyberdream.nvim",
+  lazy = false,
+  priority = 1000,
+
+  opts = {
+    transparent = true,
   },
   {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "cyberdream",
-    },
+    "sho-87/kanagawa-paper.nvim",
+    lazy = false,
+    pority = 1000,
+    opts = {},
   },
 }
