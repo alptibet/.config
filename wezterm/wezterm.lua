@@ -24,20 +24,78 @@ config = {
 
 	window_decorations = "RESIZE",
 	enable_tab_bar = false,
-	keys = {
-		{ key = "x", mods = "CTRL | ALT", action = act.ShowTabNavigator },
-		{
-			key = "p",
-			mods = "CTRL | ALT",
-			action = act.PaneSelect({
-				alphabet = "123456789",
-			}),
-		},
-		{ key = "1", mods = "CTRL | ALT", action = act.ActivatePaneByIndex(0) },
-		{ key = "2", mods = "CTRL | ALT", action = act.ActivatePaneByIndex(1) },
-		{ key = "3", mods = "CTRL | ALT", action = act.ActivatePaneByIndex(2) },
-		{ key = "4", mods = "CTRL | ALT", action = act.ActivatePaneByIndex(3) },
-		{ key = "b", mods = "CTRL | ALT", action = act.CloseCurrentPane({ confirm = false }) },
+}
+-- config.leader = { key = "q", mods = "ALT", timeout_milliseconds = 2000 }
+config.keys = {
+	{
+		mods = "ALT",
+		key = "t",
+		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+	},
+	{
+		mods = "ALT",
+		key = "x",
+		action = wezterm.action.CloseCurrentPane({ confirm = true }),
+	},
+	{
+		mods = "ALT",
+		key = "b",
+		action = wezterm.action.ActivateTabRelative(-1),
+	},
+	{
+		mods = "ALT",
+		key = "n",
+		action = wezterm.action.ActivateTabRelative(1),
+	},
+	{
+		mods = "ALT",
+		key = "/",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		mods = "ALT",
+		key = "-",
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		mods = "ALT",
+		key = "h",
+		action = wezterm.action.ActivatePaneDirection("Left"),
+	},
+	{
+		mods = "ALT",
+		key = "j",
+		action = wezterm.action.ActivatePaneDirection("Down"),
+	},
+	{
+		mods = "ALT",
+		key = "k",
+		action = wezterm.action.ActivatePaneDirection("Up"),
+	},
+	{
+		mods = "ALT",
+		key = "l",
+		action = wezterm.action.ActivatePaneDirection("Right"),
+	},
+	{
+		mods = "ALT",
+		key = "LeftArrow",
+		action = wezterm.action.AdjustPaneSize({ "Left", 5 }),
+	},
+	{
+		mods = "ALT",
+		key = "RightArrow",
+		action = wezterm.action.AdjustPaneSize({ "Right", 5 }),
+	},
+	{
+		mods = "ALT",
+		key = "DownArrow",
+		action = wezterm.action.AdjustPaneSize({ "Down", 5 }),
+	},
+	{
+		mods = "ALT",
+		key = "UpArrow",
+		action = wezterm.action.AdjustPaneSize({ "Up", 5 }),
 	},
 }
 return config
