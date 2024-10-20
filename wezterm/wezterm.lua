@@ -34,7 +34,7 @@ config.keys = {
 	},
 	{
 		mods = "ALT",
-		key = "x",
+		key = "c",
 		action = wezterm.action.CloseCurrentPane({ confirm = true }),
 	},
 	{
