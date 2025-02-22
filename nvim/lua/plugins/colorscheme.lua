@@ -1,10 +1,12 @@
 return {
-  "scottmckendry/cyberdream.nvim",
-  lazy = false,
-  priority = 1000,
+  {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
 
-  opts = {
-    transparent = true,
+    opts = {
+      transparent = true,
+    },
   },
   {
     "sho-87/kanagawa-paper.nvim",
